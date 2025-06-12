@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigiBuddy – Feedback</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white text-gray-800 min-h-screen flex flex-col">
+
+  <!-- ✅ Navbar -->
+  <header class="bg-blue-600 text-white px-6 py-4 shadow-md flex flex-col md:flex-row justify-between items-center">
+    <h1 class="text-2xl font-bold">DigiBuddy 👵👨‍💻</h1>
+    <nav class="mt-2 md:mt-0 space-x-4 text-sm md:text-base">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="tutorials.html" class="hover:underline">Tutorials</a>
+      <a href="chatbot.html" class="hover:underline">AI Chat</a>
+      <a href="feedback.html" class="hover:underline font-semibold">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Feedback Form -->
+  <main class="flex-grow flex items-center justify-center p-6">
+    <div class="bg-white rounded-lg shadow-xl p-8 max-w-xl w-full">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700">We’d love your feedback! 💬</h2>
+
+      <form action="https://formsubmit.co/batool.amina.110@gmail.com" method="POST">
+        <!-- ✅ Auto redirect after submit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 mb-1">Your Name</label>
+          <input type="text" name="name" id="name" required
+                 class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                 placeholder="Enter your name">
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 mb-1">Email (optional)</label>
+          <input type="email" name="email" id="email"
+                 class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                 placeholder="Enter your email">
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 mb-1">Your Feedback</label>
+          <textarea name="message" id="message" rows="4" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Tell us how we can improve..."></textarea>
+        </div>
+
+        <button type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded transition-all w-full">
+          Send
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-blue-600 text-white text-center py-3 mt-auto">
+    © 2025 DigiBuddy – Made with ❤️ by Batool
+  </footer>
+
+</body>
+</html>
